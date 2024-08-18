@@ -5,8 +5,8 @@
 }
 
 :root {
-    --red:rgb(255, 85, 0);
-    --blue:rgb(0, 255, 242);
+    --red:rgb(197, 66, 0);
+    --blue:rgb(1, 193, 183);
     --green:rgb(8, 255, 8);
     --gray0:#000;
     --gray1:#111;
@@ -51,7 +51,10 @@ img {
     justify-content: center;
     position: relative;
     z-index: 100;
-    background: linear-gradient(45deg ,var(--gray0),var(--gray0),var(--gray2),var(--gray3));
+    background: linear-gradient(45deg ,var(--blue),var(--gray0),var(--gray0),var(--red));
+    /* box-shadow:  -20px 10px 50px var(--red), */
+    /* 20px -10px 50px var(--blue); */
+    border-radius: 12px;
     background-size:100vw 100vh;
 }
 
@@ -114,13 +117,15 @@ img {
 }
 
 #aboutImg {
+    border-radius: 20px;
+    box-shadow: -20px 30px 100px var(--red),
+    20px 30px 100px var(--blue);
     grid-area: aboutImg;
     max-height: max(240px,50vh);
     max-width: 100%;
     object-fit: cover;
     margin:10px;
     margin-top:80px;
-    border-right: 1px solid var(--green);
     display: inline-block;
 }
 
@@ -150,7 +155,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background: linear-gradient(200deg,var(--red),var(--green),var(--blue));
+    background: linear-gradient(160deg,var(--green),var(--red),var(--blue));
     background-clip: text;
     color:transparent;
     margin:10px;
@@ -173,7 +178,7 @@ img {
 
 .about-me {
     min-height: 100%;
-    background: linear-gradient(45deg ,var(--gray0),var(--gray0),var(--gray2),var(--gray3));
+    background: linear-gradient(45deg ,var(--blue),var(--gray0),var(--gray0),var(--red));
     display: grid;
     grid-template-areas: "aboutTitle aboutTitle"
         "aboutImg aboutText"
